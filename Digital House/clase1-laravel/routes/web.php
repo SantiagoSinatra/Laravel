@@ -29,4 +29,9 @@ Route::get('/resultado/{numero}', function ($numero) {
     return $resultado;
  });
  
+
+ Route::get('/peliculas/{id}','PeliculasController@buscarPeliculaId');
+
+ Route::get('/peliculas/buscar/{nombre}','PeliculasController@buscarPeliculaNombre');
+ 
  
