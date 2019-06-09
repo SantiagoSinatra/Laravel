@@ -40,9 +40,10 @@ class PeliculasController extends Controller
 
         if(empty($peliculasEncontradas)){
             return response("No se encontro la pelicula: ".$nombre);
+        } else {
+            $vac = compact("peliculasEncontradas");
+            return view('peliculas', $vac);
         }
-
-        return view('peliculas')->with($peliculasEncontradas);
     }
 
 }
